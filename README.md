@@ -3,6 +3,9 @@
 - npm install -D tailwindcss
 - npx tailwindcss init
 - configured tailewindcss
+- Header
+- Login Form
+- Signup Form
 
 # features
 - Login/Sign in Page
