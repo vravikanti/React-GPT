@@ -1,11 +1,16 @@
 import { useState,useRef } from "react";
+import {useNavigate} from 'react-router-dom';
 import Header from "./Header";
 import { checkValidation } from "../utils/Validate";
-import { createUserWithEmailAndPassword, signInWithEmailAndPassword } from "firebase/auth";
+import { createUserWithEmailAndPassword, signInWithEmailAndPassword, updateProfile } from "firebase/auth";
 import {auth} from '../utils/firebase';
+import { useDispatch } from "react-redux";
+import { addUser } from "../utils/userSlice";
 
 const Login=()=>{
-    const [signUp, setSignUp]= useState(true);
+    const navigate = useNavigate();
+    const dispatch = useDispatch();
+    const [signUp, setSignUp]= useState(false);
     const [errorMessage,setErrorMessage]=useState("");
     const email=useRef(null);
     const password=useRef(null);
@@ -17,17 +22,31 @@ const Login=()=>{
         console.log(email.current.value);
       const validate=  checkValidation(email.current.value,password.current.value);
       setErrorMessage(validate);
-      if(errorMessage !== null) return;
-
+      //if(errorMessage !== null) return;
+        console.log(signUp);
       if(signUp){
         //Signup
         console.log("Sign up")
         createUserWithEmailAndPassword(auth, email.current.value, password.current.value)
         .then((userCredential) => {
             // Signed up 
-            console.log('test')
             const user = userCredential.user;
             console.log(user);
+            updateProfile(user,{
+                displayName:name.current.value,
+            }).then(()=>{
+                const {uid,email,displayName} =auth.currentUser;
+                console.log(displayName);
+                dispatch(addUser(
+                    {
+                        uid:uid,
+                        email:email,
+                        displayName:displayName,
+                    }
+                ));
+               
+            })
+           console.log(name.current.value);
             // ...
         })
         .catch((error) => {
@@ -38,11 +57,12 @@ const Login=()=>{
         });
       }else{
         //signin
+        console.log('login1');
         signInWithEmailAndPassword(auth, email.current.value, password.current.value)
             .then((userCredential) => {
-                // Signed in 
+                console.log('login');
                 const user = userCredential.user;
-                console.log(user);
+                
                 // ...
             })
             .catch((error) => {

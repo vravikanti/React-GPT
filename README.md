@@ -10,6 +10,21 @@
 - useRef Hook
 - Firebase setup
 - Deploying app to Production
+- Create User Signup acoount
+- Create Sign in using Firebase API
+- Created redux store with UserSlice
+- Implemented Signout
+- Update Profile
+- Unsubscribe to onAuthStateChange callback
+- configured constant file
+- Register TMDB API
+- Get data from Now Playing list of TMDB
+- Created Movies Slice
+- Created Custom hooks
+- Get Trailer of the movie
+- Applied css to MContainer
+
+
 
 # features
 - Login/Sign in Page
