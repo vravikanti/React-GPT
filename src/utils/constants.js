@@ -9,3 +9,9 @@ export const API_Movies =  {
   };
 
 export const API_NowPlaying_URL = "https://api.themoviedb.org/3/movie/now_playing";
+
+export const API_PopularMovies_URL = "https://api.themoviedb.org/3/movie/popular";
+
+export const API_TopRatesMovies_URL = "https://api.themoviedb.org/3/movie/top_rated";
+
+export const IMG_CDN = "https://image.tmdb.org/t/p/w500/";
