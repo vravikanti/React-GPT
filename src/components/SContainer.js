@@ -6,7 +6,7 @@ export const SContainer =()=>{
     
     return (
         <div className=" bg-black">
-        <div className=" -m-70 relative z-20">
+        <div className=" -mt-40 pl-2 relative z-20">
             <MovieList title={"Now Playing"} movies={movies.nowPlaingMovies} />
             <MovieList title={"Popular Movies"} movies={movies.popularMovies} />
             <MovieList title={"Top Rated Movies"} movies={movies.topRatedMovies} />
