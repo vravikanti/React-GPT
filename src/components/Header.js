@@ -58,10 +58,7 @@ const Header=()=>{
     return(
         <div className="absolute bg-gradient-to-b from-black z-30 w-screen flex justify-between">
             
-            <img 
-            className=" w-40"
-            src={logo} 
-            alt="logo"/>
+            <label className='my-5'>My Movies</label>
             {user!==null?(
                  <div className='flex p-2'>
                   { showGptSearch && (

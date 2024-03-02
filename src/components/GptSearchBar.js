@@ -37,11 +37,11 @@ export const GptSearchBar =()=>{
     }
 
     return <div className="pt-[10%] flex justify-center">
-        <form className="w-1/3 grid grid-cols-6 bg-black " onSubmit={(e)=>e.preventDefault()}>
+        <form className="w-1/3 grid grid-cols-12 bg-black " onSubmit={(e)=>e.preventDefault()}>
             <input 
             ref={gptinput}
-            type="text" className="p-4 m-4 h-5 bg-white col-span-4 text-sm" placeholder={lang[langkey].gptsearchplaceholder} />
-            <button className="h-9 py-2 my-4 mx-3 col-span-2 text-sm rounded-lg  bg-red-700 text-white "
+            type="text" className="p-4 m-3 h-5 bg-white col-span-9 text-sm" placeholder={lang[langkey].gptsearchplaceholder} />
+            <button className="h-9 py-2 my-3 mx-2 col-span-3 text-sm rounded-lg  bg-red-700 text-white "
             onClick={handleGptMovieSearch}
             >{lang[langkey].search}</button>
         </form>

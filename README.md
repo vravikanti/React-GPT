@@ -31,8 +31,11 @@
 - GPT Search Feature
 - install OpenAPI
 - call GPT API 
-- fetch movies based on recommendation
+- fetch movies suggestions from TMBD
+- Created gptslice
+- Stored movie names and results to the store
 - create GPTMovieSuggestions
+- Memoization
 
 
 
@@ -40,6 +43,12 @@
 - Login/Sign in Page
 - redirect to the browse page
 - Browse (After Authentication)
+- Trailer Movie
+- Now Playing Movies
+- Top Rated Movies
+- Popular Movies
+- Movie List with Movie Cards
+- Movies GPT
 
 # Steps for Deployment to Firebase
 - install firebase CLI - npm i -g firebase-tools

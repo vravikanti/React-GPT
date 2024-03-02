@@ -1,7 +1,7 @@
 export const lang={
     en:{
         search:'Search',
-        gptsearchplaceholder:'What would you like watch',
+        gptsearchplaceholder:'What would you like to watch',
     },
     hindi:{
         search:'खोज',
