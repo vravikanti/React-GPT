@@ -23,6 +23,16 @@
 - Created Custom hooks
 - Get Trailer of the movie
 - Applied css to MContainer
+- Build SContainer
+- Applied css to SContainer
+- Build Movielist
+- Build Movie Card
+- Tailwind fixes
+- GPT Search Feature
+- install OpenAPI
+- call GPT API 
+- fetch movies based on recommendation
+- create GPTMovieSuggestions
 
 
 

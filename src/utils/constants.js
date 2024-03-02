@@ -4,7 +4,7 @@ export const API_Movies =  {
     method: 'GET',
     headers: {
       accept: 'application/json',
-      Authorization: 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI2OGU0OTA1ODJlYTNkYzYzMzQ2MjBjYTRiYmUwZGYxZiIsInN1YiI6IjY1NzU2NTkzYTg0YTQ3MDBjNDIyMGFjNSIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.Zgo3W46XjQuk4Ny2IzgBiBeudp2AZbhpX6asyXqXdJs'
+      Authorization: 'Bearer '+process.env.REACT_APP_TMDB_KEY,
     }
   };
 
@@ -15,3 +15,11 @@ export const API_PopularMovies_URL = "https://api.themoviedb.org/3/movie/popular
 export const API_TopRatesMovies_URL = "https://api.themoviedb.org/3/movie/top_rated";
 
 export const IMG_CDN = "https://image.tmdb.org/t/p/w500/";
+
+
+export const Supported_languages=[
+  {key:'en',name:'English'},
+  {key:'hindi',name:'Hindi'}
+]
+
+export const OpenAI_key=process.env.REACT_APP_OpenAI_key;
